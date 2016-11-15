@@ -1,3 +1,5 @@
+var yes = "X";
+
 (function() {
     console.log("drawing board");
     var c = document.getElementById("myCanvas");
@@ -31,3 +33,19 @@
     canvas.closePath();
     canvas.stroke();
   })();
+
+
+$("i.letter").click(function(){
+  if ( $(this).find("span").text() ) {
+    return
+  }
+console.log(yes);
+console.log($(this).find("span"));
+$(this).find("span").text(yes);
+if (yes=="O") {
+  yes ="X"
+}
+else {
+  yes="O"
+}
+});
